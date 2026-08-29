@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import { useTheme } from '../context/ThemeContext';
 import {
@@ -9,13 +9,24 @@ import {
   MapPin,
   Sun,
   Moon,
-  ExternalLink,
-  Sparkles
+  Copy,
+  Check
 } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const { personalInfo } = portfolioData;
   const { theme, toggleTheme } = useTheme();
+  const [copied, setCopied] = useState(false);
+
+  const email = personalInfo.email || personalInfo.socials.email;
+  const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+
+  const handleCopy = () => {
+    if (!email) return;
+    navigator.clipboard.writeText(email);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <section id="about" className="pt-12 sm:pt-16 pb-8">
@@ -23,7 +34,7 @@ export const Hero: React.FC = () => {
       <div className="flex justify-between items-center mb-8">
         <div className="flex items-center gap-2 text-xs font-mono text-zinc-500 dark:text-zinc-400">
           <span className="inline-block w-2 h-2 rounded-full bg-rose-500"></span>
-          <span>{personalInfo.name.toLowerCase()}.dev</span>
+          <span>{personalInfo.name.toLowerCase().replace(/\s+/g, '')}.dev</span>
         </div>
 
         <button
@@ -89,15 +100,17 @@ export const Hero: React.FC = () => {
       {/* Action Buttons & Social Links */}
       <div className="flex flex-wrap items-center gap-3">
         {/* CV Download */}
-        <a
-          href={personalInfo.resumeUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-white bg-rose-600 hover:bg-rose-700 active:scale-95 transition-all shadow-sm shadow-rose-600/20"
-        >
-          <FileText className="w-4 h-4" />
-          <span>Curriculum Vitae</span>
-        </a>
+        {personalInfo.resumeUrl && (
+          <a
+            href={personalInfo.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-white bg-rose-600 hover:bg-rose-700 active:scale-95 transition-all shadow-sm shadow-rose-600/20"
+          >
+            <FileText className="w-4 h-4" />
+            <span>Curriculum Vitae</span>
+          </a>
+        )}
 
         {/* GitHub */}
         {personalInfo.socials.github && (
@@ -127,11 +140,34 @@ export const Hero: React.FC = () => {
           </a>
         )}
 
-        {/* Email Contact */}
-        {personalInfo.socials.email && (
+        {/* Copy Email Button */}
+        {email && (
+          <button
+            onClick={handleCopy}
+            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/60 hover:text-rose-600 dark:hover:text-rose-400 active:scale-95 transition-all"
+            title="Copiar correo electrónico al portapapeles"
+          >
+            {copied ? (
+              <>
+                <Check className="w-4 h-4 text-emerald-500" />
+                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">¡Copiado!</span>
+              </>
+            ) : (
+              <>
+                <Copy className="w-4 h-4 text-zinc-500" />
+                <span>Copiar email</span>
+              </>
+            )}
+          </button>
+        )}
+
+        {/* Gmail Direct Link */}
+        {email && (
           <a
-            href={`mailto:${personalInfo.socials.email}`}
-            aria-label="Enviar Correo"
+            href={gmailUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir Gmail"
             className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/60 hover:text-rose-600 dark:hover:text-rose-400 active:scale-95 transition-all"
           >
             <Mail className="w-4 h-4" />
