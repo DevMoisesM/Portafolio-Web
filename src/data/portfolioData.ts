@@ -2,14 +2,13 @@ import { PortfolioData } from '../types/portfolio';
 
 export const portfolioData: PortfolioData = {
   personalInfo: {
-    name: "Moisés",
+    name: "Moisés Muñoz",
     title: "Ingeniero Informático & Full Stack Developer",
     roleDescription: "Especializado en diseñar y construir arquitecturas escalables, aplicaciones web modernas y soluciones de software eficientes.",
     location: "Chile",
-    avatarUrl: "/avatar.jpg", // Ruta a tu imagen de perfil
+    avatarUrl: "/avatar.jpg",
     availableForWork: true,
-    resumeUrl: "#", // Enlace a tu CV en PDF
-    email: "contacto@tudominio.com",
+    resumeUrl: "#",
     bio: [
       "¡Hola! Soy Ingeniero en Informática apasionado por el desarrollo de software de alto impacto y la arquitectura de sistemas.",
       "Tengo experiencia creando aplicaciones web completas desde el frontend interactivo y responsive hasta backends robustos, APIs RESTful y modelos de datos relacionales y no relacionales.",
@@ -17,55 +16,25 @@ export const portfolioData: PortfolioData = {
     ],
     socials: {
       github: "https://github.com/DevMoisesM",
-      linkedin: "https://linkedin.com",
-      email: "contacto@tudominio.com",
-      twitter: "https://twitter.com"
+      linkedin: "https://linkedin.com/in/moises-munoz-sanchez",
+      email: "moisesmunoz2705@gmail.com",
     }
   },
   experiences: [
     {
-      id: "exp-1",
-      role: "Desarrollador Full Stack Senior / Líder Técnico",
-      company: "Tech Solutions Inc.",
-      companyUrl: "https://example.com",
-      period: "2023 - Presente",
-      location: "Remoto",
+      id: "exp-nomall",
+      role: "Desarrollador Web (Práctica Profesional)",
+      company: "NoMall.cl",
+      companyUrl: "https://nomall.cl",
+      period: "Ago 2025 - Dic 2025",
+      location: "Remoto, Chile",
       current: true,
       description: [
-        "Liderazgo en el diseño y desarrollo de una plataforma web SaaS escalable utilizada por más de 10,000 usuarios activos mensuales.",
-        "Implementación de arquitectura basada en microservicios, optimizando el tiempo de respuesta de las APIs en un 35%.",
-        "Coordinación de equipo técnico, code reviews y definición de estándares de calidad con TypeScript y CI/CD."
+        "Desarrollo, personalización y mantenimiento continuo de la plataforma web de comercio electrónico en Jumpseller.",
+        "Implementación y optimización de componentes visuales (HTML5, CSS3, JavaScript y plantillas Liquid), mejorando la experiencia de usuario (UX/UI) y la velocidad de navegación.",
+        "Diagnóstico y resolución de incidencias técnicas en el sitio web, asegurando la alta disponibilidad y estabilidad operativa de la tienda digital."
       ],
-      technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Docker", "AWS"]
-    },
-    {
-      id: "exp-2",
-      role: "Ingeniero de Software / Desarrollador Web",
-      company: "Digital Innovations Lab",
-      companyUrl: "https://example.com",
-      period: "2021 - 2023",
-      location: "Híbrido",
-      current: false,
-      description: [
-        "Desarrollo de módulos core para aplicaciones empresariales utilizando React, Next.js y bases de datos relacionales.",
-        "Automatización de procesos de integración y despliegue continuo reduciendo el tiempo de entrega de releases.",
-        "Refactorización y migración de código legado a TypeScript, mejorando la confiabilidad y mantenibilidad."
-      ],
-      technologies: ["React", "TypeScript", "Express", "PostgreSQL", "Redis", "Git"]
-    },
-    {
-      id: "exp-3",
-      role: "Desarrollador Frontend Junior",
-      company: "StartUp Studio",
-      companyUrl: "https://example.com",
-      period: "2020 - 2021",
-      location: "Presencial",
-      current: false,
-      description: [
-        "Construcción de interfaces de usuario modernas, accesibles y adaptables a dispositivos móviles.",
-        "Consumo e integración de APIs REST y optimización de rendimiento de carga web."
-      ],
-      technologies: ["JavaScript", "React", "CSS3 / Sass", "Tailwind CSS", "REST APIs"]
+      technologies: ["JavaScript", "HTML5", "CSS3", "Jumpseller", "Liquid", "E-Commerce",]
     }
   ],
   projects: [

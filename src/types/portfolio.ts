@@ -12,7 +12,6 @@ export interface PersonalInfo {
   avatarUrl: string;
   availableForWork: boolean;
   resumeUrl: string;
-  email: string;
   bio: string[];
   socials: {
     github?: string;
