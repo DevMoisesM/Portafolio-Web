@@ -6,7 +6,7 @@ export const Contact: React.FC = () => {
   const { personalInfo } = portfolioData;
   const [copied, setCopied] = useState(false);
 
-  const email = personalInfo.email || personalInfo.socials.email;
+  const email = personalInfo.socials.email;
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
 
   const handleCopy = () => {
@@ -71,23 +71,25 @@ export const Contact: React.FC = () => {
           )}
 
           {/* Copy Email Button */}
-          <button
-            onClick={handleCopy}
-            className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/60 hover:text-rose-600 dark:hover:text-rose-400 active:scale-95 transition-all"
-            title="Copiar correo electrónico al portapapeles"
-          >
-            {copied ? (
-              <>
-                <Check className="w-4 h-4 text-emerald-500" />
-                <span className="text-emerald-600 dark:text-emerald-400 font-semibold">¡Copiado!</span>
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4 text-zinc-500" />
-                <span>Copiar email</span>
-              </>
-            )}
-          </button>
+          {email && (
+            <button
+              onClick={handleCopy}
+              className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-medium text-zinc-700 dark:text-zinc-200 bg-zinc-100 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 hover:border-rose-500/60 hover:text-rose-600 dark:hover:text-rose-400 active:scale-95 transition-all"
+              title="Copiar correo electrónico al portapapeles"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-4 h-4 text-emerald-500" />
+                  <span className="text-emerald-600 dark:text-emerald-400 font-semibold">¡Copiado!</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-4 h-4 text-zinc-500" />
+                  <span>Copiar email</span>
+                </>
+              )}
+            </button>
+          )}
 
           {/* Direct Gmail Web Link */}
           {email && (

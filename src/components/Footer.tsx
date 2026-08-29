@@ -1,6 +1,6 @@
 import React from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { ArrowUp, Heart } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const { personalInfo } = portfolioData;
@@ -25,8 +25,29 @@ export const Footer: React.FC = () => {
           </p>
         </div>
 
-        {/* Scroll to top */}
+        {/* Links & Scroll to top */}
         <div className="flex items-center gap-4">
+          {personalInfo.socials.github && (
+            <a
+              href={personalInfo.socials.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
+            >
+              GitHub
+            </a>
+          )}
+          {personalInfo.socials.linkedin && (
+            <a
+              href={personalInfo.socials.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
+            >
+              LinkedIn
+            </a>
+          )}
+
           <button
             onClick={scrollToTop}
             aria-label="Volver arriba"

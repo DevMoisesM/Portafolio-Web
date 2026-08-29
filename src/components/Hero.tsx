@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [copied, setCopied] = useState(false);
 
-  const email = personalInfo.email || personalInfo.socials.email;
+  const email = personalInfo.socials.email;
   const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
 
   const handleCopy = () => {
