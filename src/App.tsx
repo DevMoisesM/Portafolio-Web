@@ -2,6 +2,7 @@ import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { Hero } from './components/Hero';
 import { Experience } from './components/Experience';
+import { Projects } from './components/Projects';
 
 export const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const App: React.FC = () => {
         <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
           <Hero />
           <Experience />
+          <Projects />
         </main>
       </div>
     </ThemeProvider>

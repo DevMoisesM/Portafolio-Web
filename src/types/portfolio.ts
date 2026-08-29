@@ -37,11 +37,11 @@ export interface ProjectItem {
   id: string;
   title: string;
   description: string;
-  image: string;
+  image?: string; // Opcional
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
-  featured: boolean;
+  featured?: boolean;
 }
 
 export interface SkillItem {

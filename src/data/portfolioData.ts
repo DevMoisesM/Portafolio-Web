@@ -39,44 +39,14 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      id: "proj-1",
-      title: "Plataforma de Gestión Empresarial (ERP / SaaS)",
-      description: "Sistema integral en la nube para administración de inventario, facturación electrónica y métricas en tiempo real con dashboards analíticos.",
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Chart.js"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+      id: "proj-campus-seguro",
+      title: "Campus Seguro — Gestión de Infraestructura & Seguridad",
+      description: "Plataforma web integral para reporte geolocalizado de incidentes, matrices de riesgo en terreno, ciclo de vida de tickets, control de inventario de pañol y dashboard analítico BI para campus universitarios. (Proyecto de Título de Ingeniería Informática).",
+      image: "",
+      technologies: ["Python", "Django", "Angular", "TypeScript", "PostgreSQL", "Docker", "Tailwind CSS"],
+      githubUrl: "https://github.com/DevMoisesM/Campus-Seguro",
+      liveUrl: "https://campus-seguro.vercel.app",
       featured: true
-    },
-    {
-      id: "proj-2",
-      title: "E-Commerce Full Stack con Pagos Seguros",
-      description: "Tienda online completa con catálogo reactivo, carrito de compras sincronizado, panel de administración e integración de pasarela de pagos.",
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=800&auto=format&fit=crop&q=80",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Express", "Stripe API", "MongoDB"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      featured: true
-    },
-    {
-      id: "proj-3",
-      title: "API REST de Microservicios & Auth JWT",
-      description: "Servidor backend de alto rendimiento con autenticación basada en tokens JWT, roles y permisos, validación de esquemas y documentación Swagger.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&auto=format&fit=crop&q=80",
-      technologies: ["Node.js", "TypeScript", "PostgreSQL", "Docker", "Redis", "Swagger"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      featured: true
-    },
-    {
-      id: "proj-4",
-      title: "Task Manager Colaborativo en Tiempo Real",
-      description: "Aplicación de gestión de proyectos y tareas estilo Kanban con sincronización de estado en tiempo real vía WebSockets.",
-      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?w=800&auto=format&fit=crop&q=80",
-      technologies: ["React", "TypeScript", "Tailwind CSS", "Socket.io", "Node.js"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-      featured: false
     }
   ],
   skills: [
