@@ -6,14 +6,14 @@ export const portfolioData: PortfolioData = {
     title: "Ingeniero Informático & Full Stack Developer",
     roleDescription: "Especializado en diseñar y construir arquitecturas escalables, aplicaciones web modernas y soluciones de software eficientes.",
     location: "Chile",
-    avatarUrl: "https://images.unsplash.com/photo-1534972195531-a756b1126f24?w=400&auto=format&fit=crop&q=80",
+    avatarUrl: "/avatar.jpg", // Ruta a tu imagen de perfil
     availableForWork: true,
     resumeUrl: "#", // Enlace a tu CV en PDF
     email: "contacto@tudominio.com",
     bio: [
-      "¡Hola! 👋 Soy Ingeniero en Informática apasionado por el desarrollo de software de alto impacto y la arquitectura de sistemas.",
+      "¡Hola! Soy Ingeniero en Informática apasionado por el desarrollo de software de alto impacto y la arquitectura de sistemas.",
       "Tengo experiencia creando aplicaciones web completas desde el frontend interactivo y responsive hasta backends robustos, APIs RESTful y modelos de datos relacionales y no relacionales.",
-      "Me enfoco en escribir código limpio, mantenible, con buenas prácticas (Clean Code, SOLID) y una experiencia de usuario (UX) cuidada al detalle."
+      "Me enfoco en escribir código limpio, mantenible, con buenas prácticas y una experiencia de usuario (UX) cuidada al detalle."
     ],
     socials: {
       github: "https://github.com/DevMoisesM",
