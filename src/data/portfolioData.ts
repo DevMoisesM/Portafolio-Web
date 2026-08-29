@@ -59,45 +59,46 @@ export const portfolioData: PortfolioData = {
     { name: "Tailwind CSS", category: "Frontend" },
     { name: "Next.js", category: "Frontend" },
     { name: "HTML5 & CSS3", category: "Frontend" },
-    { name: "Redux / Zustand", category: "Frontend" },
-    { name: "Node.js", category: "Backend" },
-    { name: "Express.js", category: "Backend" },
-    { name: "NestJS", category: "Backend" },
+    { name: "Angular", category: "Frontend" },
     { name: "RESTful APIs", category: "Backend" },
-    { name: "GraphQL", category: "Backend" },
+    { name: "Django", category: "Backend" },
     { name: "PostgreSQL", category: "Bases de Datos" },
     { name: "MySQL", category: "Bases de Datos" },
     { name: "MongoDB", category: "Bases de Datos" },
-    { name: "Redis", category: "Bases de Datos" },
     { name: "Docker", category: "DevOps & Herramientas" },
     { name: "Git & GitHub", category: "DevOps & Herramientas" },
-    { name: "Linux / Bash", category: "DevOps & Herramientas" },
     { name: "CI / CD Pipelines", category: "DevOps & Herramientas" },
-    { name: "AWS (S3, EC2)", category: "DevOps & Herramientas" }
   ],
   education: [
     {
-      id: "edu-1",
-      degree: "Ingeniería en Informática / Computación",
-      institution: "Universidad / Instituto Profesional",
-      period: "2017 - 2022",
-      description: "Especialización en Ingeniería de Software, Algoritmos, Estructuras de Datos, Arquitectura de Sistemas y Gestión de Proyectos Tecnológicos."
+      id: "edu-duoc",
+      degree: "Ingeniería en Informática",
+      institution: "Duoc UC — Sede San Andrés de Concepción",
+      period: "2021 - 2026",
+      description: "Formación integral en desarrollo de software full stack, arquitectura de aplicaciones, bases de datos y metodologías ágiles."
     }
   ],
   certifications: [
     {
       id: "cert-1",
-      title: "AWS Certified Cloud Practitioner",
-      issuer: "Amazon Web Services (AWS)",
-      date: "2023",
-      credentialUrl: "#"
+      title: "PCEP – Certified Entry-Level Python Programmer",
+      issuer: "OpenEDG Python Institute",
+      date: "2025",
+      credentialUrl: "https://verify.openedg.org/?id=Q6O4.ODpX.CqnC"
     },
     {
       id: "cert-2",
-      title: "Full Stack Web Development & Modern Architecture",
-      issuer: "Plataforma de Certificación Tech",
-      date: "2022",
-      credentialUrl: "#"
+      title: "Google AI Essentials",
+      issuer: "Google",
+      date: "2026",
+      credentialUrl: "https://coursera.org/verify/specialization/7E7C79AIF999"
+    },
+    {
+      id: "cert-3",
+      title: "Crash Course on Python",
+      issuer: "Google",
+      date: "2026",
+      credentialUrl: "https://coursera.org/verify/7EPVK31MOD0O"
     }
   ]
 };
