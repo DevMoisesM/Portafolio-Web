@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     location: "Chile",
     avatarUrl: "/avatar.jpg",
     availableForWork: true,
-    resumeUrl: "#",
+    resumeUrl: "/cv-moises-munoz.pdf",
     bio: [
       "¡Hola! Soy Ingeniero en Informática apasionado por el desarrollo de software de alto impacto y la arquitectura de sistemas.",
       "Tengo experiencia creando aplicaciones web completas desde el frontend interactivo y responsive hasta backends robustos, APIs RESTful y modelos de datos relacionales y no relacionales.",
